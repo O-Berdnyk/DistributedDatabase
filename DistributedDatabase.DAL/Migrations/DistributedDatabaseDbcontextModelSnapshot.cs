@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DistributedDatabase.DAL.Migrations
 {
-    [DbContext(typeof(DistributedDatabaseDbcontext))]
+    [DbContext(typeof(DistributedDatabaseDbContext))]
     partial class DistributedDatabaseDbcontextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

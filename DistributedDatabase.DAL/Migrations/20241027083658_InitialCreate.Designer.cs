@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DistributedDatabase.DAL.Migrations
 {
-    [DbContext(typeof(DistributedDatabaseDbcontext))]
+    [DbContext(typeof(DistributedDatabaseDbContext))]
     [Migration("20241027083658_InitialCreate")]
     partial class InitialCreate
     {

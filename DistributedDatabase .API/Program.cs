@@ -1,11 +1,14 @@
 using DistributedDatabase.DAL;
+using DistributedDatabase_.API.Services;
 using Microsoft.EntityFrameworkCore;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<DistributedDatabaseDbcontext>(options =>
+builder.Services.AddDbContext<DistributedDatabaseDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddHostedService<DatabaseFillingService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

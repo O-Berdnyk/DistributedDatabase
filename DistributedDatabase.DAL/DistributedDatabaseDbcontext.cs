@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DistributedDatabase.DAL
 {
-    public class DistributedDatabaseDbcontext : DbContext
+    public class DistributedDatabaseDbContext : DbContext
     {
-        public DistributedDatabaseDbcontext(DbContextOptions<DistributedDatabaseDbcontext> options)
+        public DistributedDatabaseDbContext(DbContextOptions<DistributedDatabaseDbContext> options)
             : base(options) 
         {
         }
