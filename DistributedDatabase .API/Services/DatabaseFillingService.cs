@@ -1,5 +1,4 @@
-﻿
-using DistributedDatabase.DAL;
+﻿using DistributedDatabase.DAL;
 using DistributedDatabase.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -31,11 +30,41 @@ namespace DistributedDatabase_.API.Services
         {
             var students = new List<Student>
             {
-                new Student { FirstName = "Oleksandr", LastName = "Berdnyk" },
-                new Student { FirstName = "Emilio", LastName = "Bryant" },
-                new Student { FirstName = "Norman", LastName = "Walker" },
-                new Student { FirstName = "Diana", LastName = "Smith" },
-                new Student { FirstName = "Oleksandr", LastName = "Mitchell" }
+                new Student 
+                { 
+                    FirstName = "Oleksandr",
+                    LastName = "Berdnyk",
+                    Birthday=new DateOnly(2003,4,1),
+                    Group = 501
+                },
+                new Student 
+                { 
+                    FirstName = "Emilio",
+                    LastName = "Bryant",
+                    Birthday=new DateOnly(2002,3,2),
+                    Group = 501
+                },
+                new Student
+                {
+                    FirstName = "Norman",
+                    LastName = "Walker",
+                    Birthday=new DateOnly(2003,7,23),
+                    Group = 507
+                },
+                new Student 
+                {
+                    FirstName = "Diana",
+                    LastName = "Smith",
+                    Birthday=new DateOnly(2003,2,16),
+                    Group = 501
+                },
+                new Student 
+                { 
+                    FirstName = "Oleksandr",
+                    LastName = "Mitchell",
+                    Birthday=new DateOnly(2002,1,3),
+                    Group = 501
+                }
             };
 
             var courses = new List<Course>

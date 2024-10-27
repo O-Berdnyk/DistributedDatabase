@@ -4,7 +4,6 @@ using DistributedDatabase_.API.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,7 +26,6 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

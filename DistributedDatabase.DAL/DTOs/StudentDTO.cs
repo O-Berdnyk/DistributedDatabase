@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DistributedDatabase.DAL.DTOs
+﻿namespace DistributedDatabase.DAL.DTOs
 {
     public class StudentDTO
     {
