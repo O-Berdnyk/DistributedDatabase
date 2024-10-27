@@ -7,5 +7,6 @@
         public int Credits { get; set; }
 
         public ICollection<StudentCourse> StudentCourses { get; set; } = null!;
+        public ICollection<TeacherCourse> TeacherCourses { get; set; } = null!;
     }
 }

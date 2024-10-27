@@ -17,17 +17,30 @@ namespace DistributedDatabase.DAL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<StudentCourse>()
-            .HasKey(sc => new { sc.StudentId, sc.CourseId });
+                .HasKey(sc => new { sc.StudentId, sc.CourseId });
 
             modelBuilder.Entity<StudentCourse>()
-            .HasOne(sc => sc.Student)
-            .WithMany(s => s.StudentCourses)
-            .HasForeignKey(sc => sc.StudentId);
+                .HasOne(sc => sc.Student)
+                .WithMany(s => s.StudentCourses)
+                .HasForeignKey(sc => sc.StudentId);
             
             modelBuilder.Entity<StudentCourse>()
-            .HasOne(sc => sc.Course)
-            .WithMany(c => c.StudentCourses)
-            .HasForeignKey(sc => sc.CourseId);
+                .HasOne(sc => sc.Course)
+                .WithMany(c => c.StudentCourses)
+                .HasForeignKey(sc => sc.CourseId);
+
+            modelBuilder.Entity<TeacherCourse>()
+                .HasKey(sc => new { sc.TeacherId, sc.CourseId });
+
+            modelBuilder.Entity<TeacherCourse>()
+                .HasOne(sc => sc.Teacher)
+                .WithMany(s => s.TeacherCourses)
+                .HasForeignKey(sc => sc.TeacherId);
+
+            modelBuilder.Entity<TeacherCourse>()
+                .HasOne(sc => sc.Course)
+                .WithMany(c => c.TeacherCourses)
+                .HasForeignKey(sc => sc.CourseId);
         }
     }
 }
